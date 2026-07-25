@@ -33,7 +33,18 @@ const SKILLS = {
   CRO: ["Funnel Audits", "A/B Testing", "Analytics Review", "Copy & Message Match", "Checkout Optimisation"],
 };
 
-const TOOLS = ["Figma", "Maze", "Hotjar", "GA4", "Amplitude", "FullStory", "Optimal Workshop", "Notion"];
+const TOOLS = [
+  "Figma",
+  "Claude",
+  "Antigravity",
+  "Maze",
+  "Hotjar",
+  "GA4",
+  "Amplitude",
+  "FullStory",
+  "Optimal Workshop",
+  "Notion",
+];
 
 export default function AboutPage() {
   return (
@@ -66,6 +77,12 @@ export default function AboutPage() {
               Most of my work starts with a question nobody has quite answered yet: where, exactly,
               is this losing people? Everything after that, wireframes, prototypes, visual design,
               exists to answer it.
+            </p>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+              I also use modern AI tools like Claude and Antigravity to sharpen the workflow:
+              faster research synthesis, broader UX exploration, cleaner documentation, and tighter
+              design QA. The tools speed up the thinking; the final call still comes from evidence,
+              product context, and human judgement.
             </p>
           </Reveal>
         </div>

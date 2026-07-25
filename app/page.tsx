@@ -16,6 +16,9 @@ const TOOLS = [
   "CRO Audits",
   "Heuristic Evaluation",
   "Design Systems",
+  "Claude",
+  "Antigravity",
+  "AI-assisted UX",
   "A/B Testing",
   "Prototyping",
   "Accessibility",
@@ -43,6 +46,11 @@ const PROCESS = [
     step: "03",
     title: "Validate, then ship",
     text: "Usability testing and A/B experiments confirm a direction before it goes to engineering, so what ships is already proven to move the metric it was meant to move.",
+  },
+  {
+    step: "04",
+    title: "Use AI where it sharpens the work",
+    text: "Claude, Antigravity, and AI-assisted workflows help me move faster through research synthesis, UX exploration, prototype refinement, and design QA, while final decisions stay grounded in evidence and human judgement.",
   },
 ];
 
@@ -232,7 +240,7 @@ export default function Home() {
             title="Design decisions, backed by evidence"
             description="A CRO audit mindset applied to every design engagement, not bolted on after the fact."
           />
-          <StaggerGroup className="mt-14 grid gap-8 md:grid-cols-3">
+          <StaggerGroup className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {PROCESS.map((item) => (
               <StaggerItem
                 key={item.step}
