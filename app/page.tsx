@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, CheckCheck, Gauge, Layers } from "lucide-react";
+import { ArrowUpRight, CheckCheck, Gauge, Layers, Sparkles } from "lucide-react";
 import { BlobBackground } from "@/components/BlobBackground";
 import { Marquee } from "@/components/Marquee";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
@@ -155,6 +155,22 @@ export default function Home() {
                   <div>
                     <p className="text-sm font-medium">Design system</p>
                     <p className="text-xs text-muted">48 components shipped</p>
+                  </div>
+                </div>
+              </Reveal>
+
+              <Reveal
+                delay={0.75}
+                y={30}
+                className="absolute -bottom-8 -right-12 hidden w-64 rotate-2 rounded-2xl border border-line bg-surface/95 p-4 shadow-2xl shadow-black/40 backdrop-blur-md xl:block"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#d97757] via-accent to-accent-2 text-background">
+                    <Sparkles size={16} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium">AI-native design</p>
+                    <p className="text-xs text-muted">Claude + Antigravity workflows</p>
                   </div>
                 </div>
               </Reveal>
