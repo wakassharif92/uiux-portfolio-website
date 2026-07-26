@@ -7,8 +7,10 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectCard } from "@/components/ProjectCard";
 import { AuditCard } from "@/components/AuditCard";
+import { TestimonialCard } from "@/components/TestimonialCard";
 import { projects } from "@/lib/projects";
 import { audits } from "@/lib/audits";
+import { testimonials } from "@/lib/testimonials";
 
 const TOOLS = [
   "Figma",
@@ -57,6 +59,7 @@ const PROCESS = [
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
   const featuredAudits = audits.slice(0, 3);
+  const featuredTestimonials = testimonials.slice(0, 3);
 
   return (
     <>
@@ -230,6 +233,35 @@ export default function Home() {
             </StaggerItem>
           ))}
         </StaggerGroup>
+      </section>
+
+      {/* Reviews */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <SectionHeading
+              eyebrow="Testimonials"
+              title="What it's like to work together"
+              description="Feedback from founders and product teams across the work shown above."
+            />
+            <Reveal>
+              <Link
+                href="/testimonials"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-foreground"
+              >
+                View all testimonials <ArrowUpRight size={14} />
+              </Link>
+            </Reveal>
+          </div>
+
+          <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredTestimonials.map((t) => (
+              <StaggerItem key={t.id}>
+                <TestimonialCard testimonial={t} />
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+        </div>
       </section>
 
       {/* Process */}

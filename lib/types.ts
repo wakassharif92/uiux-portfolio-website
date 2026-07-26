@@ -27,6 +27,14 @@ export type AuditBlock =
   | { type: "quote"; text: string }
   | { type: "stat-row"; stats: { label: string; value: string }[] };
 
+export type Testimonial = {
+  id: string;
+  quote: string;
+  name: string;
+  role: string;
+  projectType: string;
+};
+
 export type Audit = {
   slug: string;
   title: string;
